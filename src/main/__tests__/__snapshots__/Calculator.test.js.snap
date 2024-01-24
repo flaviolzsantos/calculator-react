@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculador Component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="calculator"
+  >
+    <div
+      class="display"
+    >
+      0
+    </div>
+    <button
+      class="button
+        
+        
+        triple"
+    >
+      AC
+    </button>
+    <button
+      class="button
+        operation
+        
+        "
+    >
+      /
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      7
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      8
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      9
+    </button>
+    <button
+      class="button
+        operation
+        
+        "
+    >
+      *
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      4
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      5
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      6
+    </button>
+    <button
+      class="button
+        operation
+        
+        "
+    >
+      -
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      1
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      2
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      3
+    </button>
+    <button
+      class="button
+        operation
+        
+        "
+    >
+      +
+    </button>
+    <button
+      class="button
+        
+        double
+        "
+    >
+      0
+    </button>
+    <button
+      class="button
+        
+        
+        "
+    >
+      .
+    </button>
+    <button
+      class="button
+        operation
+        
+        "
+    >
+      =
+    </button>
+  </div>
+</DocumentFragment>
+`;

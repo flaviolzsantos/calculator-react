@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './Calculador.css'
+import './Calculator.css'
 
 import Button from "../components/Button";
 import Display from "../components/Display";
@@ -20,7 +20,7 @@ const enumOperation = {
     equal: 'equal'
 };
 
-class Calculador extends Component {
+class Calculator extends Component {
 
     
     
@@ -38,13 +38,14 @@ class Calculador extends Component {
 
     setOperation(operation){
         let op = null;
+        
         switch(operation){
             case '/' : op = enumOperation.division; break;
             case '*' : op = enumOperation.multiplier; break;
             case '-' : op = enumOperation.minus; break;
             case '+' : op = enumOperation.plus; break;
             case '=' : op = enumOperation.equal; break;
-            default : op = null;
+            default : throw new Error('not implemented');
         }
         this.setState({
             operation:op,
@@ -53,8 +54,7 @@ class Calculador extends Component {
 
         if(op === enumOperation.equal){
             let display = 0;
-            const firstValue = this.state.firstValue;
-            const secoundValue = this.state.secoundValue;
+            const {firstValue, secoundValue} = this.state;
 
             switch(this.state.operation){
                 case enumOperation.division:
@@ -70,10 +70,10 @@ class Calculador extends Component {
                     display = firstValue + secoundValue;
                     break;
                 default:
-                    display = 0;
+                    throw new Error('not implemented');
             }
 
-            this.setState({display});
+            this.setState({display, clearDisplay : true, firstValue : display});
         }
     }
 
@@ -86,7 +86,7 @@ class Calculador extends Component {
         if(this.state.operation == null){
             this.setState(
                 {
-                    display: (this.state.display == 0) ? n : this.state.display + n,
+                    display: (this.state.display === '0') ? n : this.state.display + n,
                     firstValue : parseFloat(this.state.display + n)
                 });
         }else{
@@ -128,4 +128,4 @@ class Calculador extends Component {
     }
 }
 
-export default Calculador
+export default Calculator
